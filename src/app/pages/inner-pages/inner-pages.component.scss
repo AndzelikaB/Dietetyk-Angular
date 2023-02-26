@@ -1,0 +1,32 @@
+@import "variables.scss";
+
+.site-container {
+  overflow: hidden;
+}
+.content-title {
+  line-height: 1.2;
+  font: 400 3.6rem "Sen", sans-serif;
+  color: #333;
+  padding: 0 35px 15px;
+  margin-bottom: 0;
+  margin-top: 30px;
+  border-bottom: 2px solid #c4c4c4;
+
+  @media (max-width: 991px) {
+    font-size: 2.9rem;
+    padding: 0px 0px 10px;
+    text-align: center;
+  }
+  @media (max-width: 450px) {
+    font-size: 2.2rem;
+  }
+}
+
+.site-content-wrapper {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.site-content {
+  margin-top: 50px;
+}

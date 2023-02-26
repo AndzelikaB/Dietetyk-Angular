@@ -1,0 +1,197 @@
+<app-header></app-header>
+<div class="site-container">
+  <div class="site-top">
+    <div id="site-header" class="row site-header mx-0">
+      <script>
+        addHeader();
+      </script>
+    </div>
+
+    <div id="slideshow" class="slideshow">
+      <ul class="slider px-0">
+        <li class="slider-item">
+          <img class="slider-item-image" src="../assets/slider/slider.jpg" alt="Slider image - meter" />
+
+          <div class="slider-item-details">
+            <h1 class="slider-item--text">
+              Przekonaj się jak łatwo połączyć
+              <span> smak ze zdrowiem </span>
+            </h1>
+            <button class="slider-item--button">
+              <a routerLink='/contact'>
+                Umów się!
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </button>
+          </div>
+        </li>
+        <!-- <li class="slider-item">
+            <img class="slider-item-image" src="../assets/slider/slider1.jpg" alt="Slider image - kiwi cocktail" />
+            <div class="slider-item-details">
+              <h1 class="slider-item--text">
+                Wskażę Ci właściwą drogę odżywiania i
+                <span> zadbam o Twoje zdrowie </span>
+              </h1>
+            </div>
+          </li>
+
+          <li class="slider-item">
+            <img class="slider-item-image" src="../assets/slider/slider2.jpg" alt="Slider image - a jar of oatmeal" />
+            <div class="slider-item-details">
+              <h1 class="slider-item--text">
+                Łączę wykształcenie, pasję i wiarę w skuteczność
+                <span> zdrowego stylu życia </span>
+              </h1>
+            </div>
+          </li> -->
+      </ul>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <script>
+        addMobileMenu();
+      </script>
+    </div>
+  </div>
+
+  <div class="site-content">
+    <div class="site-content-wrapper">
+      <div id="why_worthit" class="col-12 site-content__row-0">
+        <div class="content-wrapper">
+          <div class="content-wrapper-components d-flex">
+            <div class="components col-6 col-lg-3">
+              <div class="components__item components__item1">
+                <div class="image">
+                  <img src="../assets/main-page/plan_icon.png" alt="Diet plan" />
+                </div>
+                <h5>Indywidualna dieta</h5>
+              </div>
+            </div>
+            <div class="components col-6 col-lg-3">
+              <div class="components__item components__item2">
+                <div class="image">
+                  <img src="../assets/main-page/diet_icon.png" alt="Healthy food" />
+                </div>
+                <h5>Zdrowe odżywianie</h5>
+              </div>
+            </div>
+            <div class="components col-6 col-lg-3">
+              <div class="components__item components__item3">
+                <div class="image">
+                  <img src="../assets/main-page/online-education_icon.png" alt="Online education" />
+                </div>
+                <h5>Edukacja żywieniowa</h5>
+              </div>
+            </div>
+            <div class="components col-6 col-lg-3">
+              <div class="components__item components__item4">
+                <div class="image">
+                  <img src="../assets/main-page/slimming_icon.png" alt="Body measurement" />
+                </div>
+                <h5>Zdrowe odchudzanie</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" class="col-12 site-content__row-1">
+        <h2 class="quote">
+          Jeśli dieta jesta niewłaściwa, medycyna bywa bezradna. Jeśli dieta
+          jest właściwa, medycyna bywa niepotrzebna.
+        </h2>
+      </div>
+      <div data-aos="fade-right" id="about_me" class="col-12 site-content__row-2">
+        <div class="about-me row">
+          <div class="col-12 col-lg-7 about-me-textBlock">
+            <h2>Poznaj mnie!</h2>
+
+            <h3>
+              Nazywam się Agnieszka Borowska i jestem dyplomowanym
+              dietetykiem klinicznym.
+            </h3>
+            <p>
+              Słowem wstępu opowiem trochę o sobie. Ukończyłam licencjat z
+              Dietetyki na Śląskim Uniwersytecie Medycznym w Katowicach.
+              Kontynuuję naukę na II stopniu o tym samym kierunku. Gotowanie
+              oraz jedzenie jest moją pasją. W szczególności zdrowa żywność
+              mnie cieszy z uwagi na dobrodziejstwa jakie można z niej
+              uzyskać. Jako że mam aktualną wiedzę z zakresu żywienia
+              zdrowego i chorego człowieka, gorąco zachęcam do skorzystania
+              z moich usług dietetycznych online!
+              <span class="socials"> </span>
+            </p>
+            <div class="socials">
+              <a href="#"><i class="fab fa-linkedin-in"></i> </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5 about-me-imageBlock">
+            <div class="blok">
+              <img src="../assets/main-page/about_me.jpg" alt="Photo of a dietitian" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="offer" data-aos="fade-up" class="col-12 site-content__row-3">
+        <div class="elements">
+          <div class="col elements-item elements-item1">
+            <a routerLink="/offer">
+              <img src="../assets/main-page/online.jpg" alt="Notebook" />
+              <div class="tekst">
+                <h5>Opieka online</h5>
+                <p>Konsultacje w formie video rozmowy</p>
+              </div>
+            </a>
+          </div>
+          <div class="col elements-item elements-item2">
+            <a routerLink="/visit">
+              <img src="../assets/main-page/first-meeting.jpg" alt="Online conversation" />
+              <div class="tekst">
+                <h5>Wizyta</h5>
+                <p>Sprawdź jak będą wyglądać spotkania</p>
+              </div>
+            </a>
+          </div>
+          <div class="col elements-item elements-item3">
+            <a routerLink="/price-list">
+              <img src="../assets/main-page/price.jpg" alt="Hand with money" />
+              <div class="tekst">
+                <h5>Cennik</h5>
+                <p>Poznaj ceny i zdecyduj</p>
+              </div>
+            </a>
+          </div>
+          <div class="col elements-item elements-item4">
+            <a routerLink="/price-list">
+              <img src="../assets/main-page/visit-package.jpg" alt="Gift" />
+              <div class="tekst">
+                <h5>Pakiety wizyt</h5>
+                <p>Dowiedz się jak zaoszczędzić pieniądze</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" class="site-content__row-4">
+        <div class="row ig-embeded">
+          <a href="https://www.instagram.com/diet_etyk_foodlover/" class="col-lg-3 col-12 ig-embeded_details"
+            target="_blank" alt="instagram icon">
+            <h3>Instagram</h3>
+            <p>
+              #diet_etyk_foodlover <i class="fa-brands fa-instagram"></i>
+            </p>
+          </a>
+          <div class="col-lg-9 col-12 ig-embeded_images">
+            <div class="test">
+              <div id="ig-embeded-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

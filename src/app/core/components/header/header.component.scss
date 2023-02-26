@@ -1,0 +1,143 @@
+@import "variables.scss";
+
+.site-top {
+  @media (max-width: 991px) {
+    height: unset;
+  }
+
+  .site-header {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    padding: 25px 25px 0;
+    min-height: var(--site-header-height);
+    z-index: 1;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 991px) {
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 20px 0;
+      }
+
+      &__details {
+        &-logo {
+          img {
+            max-width: 200px;
+          }
+        }
+      }
+
+      &__right {
+        height: 100%;
+        @media (max-width: 991px) {
+          padding: 25px 25px 0;
+        }
+        .row {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          margin: 0;
+        }
+
+        &-social-icons {
+          justify-content: flex-end;
+          column-gap: 10px;
+
+          a {
+            text-decoration: none;
+            transition: 1s;
+
+            i {
+              font-style: normal;
+              z-index: 3;
+
+              &::before {
+                font: 700 1.6rem "Font Awesome 5 Brands";
+                color: $header-icon;
+              }
+            }
+
+            &:hover {
+              transform: rotateY(360deg);
+
+              i {
+                &::before {
+                  color: $header-icon-hover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 991px) {
+    .sticky {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: $sticky-menu-bg;
+      z-index: 3;
+      padding: 0;
+      transition: 0.5s;
+      min-height: 65px !important;
+      transition: 500ms ease-in-out;
+
+      .row {
+        height: 100%;
+      }
+
+      .site-header-wrapper {
+        z-index: 1;
+        padding: 0 35px;
+
+        @media (max-width: 991px) {
+          flex-direction: row;
+        }
+
+        &__details {
+          img {
+            max-width: 130px;
+          }
+        }
+
+        .site-menu {
+          &-item {
+            &--link {
+              color: $sticky-menu;
+
+              &:hover {
+                color: $sticky-menu;
+
+                .line1,
+                .line2,
+                .line3,
+                .line4 {
+                  background: $sticky-menu;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.inner-page {
+    .site-top {
+      height: 100%;
+
+      .site-header {
+        position: relative;
+      }
+    }
+  }
+}

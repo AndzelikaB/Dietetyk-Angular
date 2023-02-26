@@ -1,0 +1,172 @@
+@import "variables.scss";
+
+.site-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-right: 7vw;
+  margin-left: 7vw;
+  border-radius: 5px;
+  box-shadow: -1px 0px 10px 3px rgba(138, 136, 136, 0.5);
+
+  @media (max-width: 991px) {
+    box-shadow: unset;
+    border-radius: unset;
+    margin: 0;
+  }
+
+  > .row {
+    padding: 30px;
+    @media (max-width: 991px) {
+      margin: 0;
+    }
+
+    @media (max-width: 445px) {
+      padding: 5px;
+    }
+
+    .wrapper {
+      header {
+        padding: 20px 30px;
+        color: $secondary-color;
+        font: 500 2.2rem "Sen", sans-serif;
+
+        @media (max-width: 991px) {
+          padding: 0 0 20px;
+          text-align: center;
+        }
+      }
+
+      form {
+        padding: 0 30px;
+
+        @media (max-width: 445px) {
+          padding: 0;
+        }
+
+        &.disabled {
+          pointer-events: none;
+          opacity: 0.7;
+        }
+
+        .dbl-field {
+          display: flex;
+          margin-bottom: 25px;
+          flex-wrap: wrap;
+        }
+
+        i {
+          position: absolute;
+          top: 50%;
+          left: 18px;
+          color: #ccc;
+          font-size: 1.06rem;
+          pointer-events: none;
+          transform: translateY(-50%);
+        }
+
+        .field {
+          position: relative;
+          height: 50px;
+          width: 100%;
+        }
+
+        .field input::placeholder,
+        .message textarea::placeholder {
+          color: #ccc;
+        }
+
+        .field input:focus,
+        .message textarea:focus {
+          padding-left: 47px;
+          border: 2px solid $contact-form-details;
+        }
+
+        .field input:focus ~ i,
+        .message textarea:focus ~ i {
+          color: $contact-form-details;
+        }
+
+        .field input,
+        .message textarea {
+          width: 100%;
+          height: 100%;
+          outline: none;
+          padding: 0 18px 0 48px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+
+        .message {
+          position: relative;
+
+          i {
+            top: 30px;
+            font-size: 20px;
+          }
+
+          textarea {
+            min-height: 130px;
+            max-height: 230px;
+            max-width: 100%;
+            min-width: 100%;
+            padding: 15px 20px 0 48px;
+
+            &:focus {
+              padding-top: 14px;
+            }
+
+            &::-webkit-scrollbar {
+              width: 0;
+            }
+          }
+        }
+
+        .button-area {
+          margin: 25px 0;
+          display: flex;
+          align-items: center;
+
+          button {
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 1.12rem;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 13px 25px;
+            background: $contact-form-details;
+            transition: background 0.3s ease;
+
+            &:hover {
+              background: $contact-form-details;
+            }
+          }
+
+          span {
+            font-size: 1.06rem;
+            margin-left: 30px;
+            display: none;
+            color: #333 !important;
+          }
+        }
+      }
+    }
+
+    .image {
+      img {
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+
+        @media (max-width: 991px) {
+          display: flex;
+          width: 50%;
+          margin: 20px auto 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

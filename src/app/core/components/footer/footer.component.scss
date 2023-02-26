@@ -1,0 +1,150 @@
+@import "variables.scss";
+
+.site-footer {
+  background: $footer-bg;
+  color: #3f597b;
+  position: relative;
+
+  &-details {
+    padding: 4em;
+    flex-wrap: wrap;
+
+    a {
+      color: unset;
+      text-decoration: none;
+
+      &:hover {
+        color: $footer-icon-hover;
+      }
+    }
+
+    .col-12 {
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 3.5rem;
+      text-transform: uppercase;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 30%;
+        height: 3px;
+        background: #3b5577;
+        position: absolute;
+        border: 0;
+        left: 0;
+        bottom: -15px;
+      }
+    }
+
+    &--information {
+      p {
+        margin-bottom: 1.2rem;
+        font-weight: 300;
+        padding-right: 3.4rem;
+
+        i {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    &--data {
+      word-break: break-all;
+
+      p {
+        i {
+          padding: 0 20px 20px 0;
+          color: $footer-icon;
+
+          &::before {
+            background: $footer-icon-bg;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    &--icons {
+      .icons-element {
+        display: flex;
+        flex-direction: row;
+        column-gap: 15px;
+        flex-wrap: wrap;
+
+        a {
+          text-decoration: none;
+          word-break: break-word;
+
+          i {
+            font-style: normal;
+            background: $footer-icon-bg;
+            border-radius: 5px;
+            margin: 0;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+
+            &::before {
+              font: 700 1.2rem "Font Awesome 5 Brands";
+              color: $footer-icon;
+            }
+
+            &:hover {
+              background: #fff;
+              border: 1px solid $secondary-color;
+              &::before {
+                color: $footer-icon-hover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    // background: url(../img/favicon.png) no-repeat;
+    width: 147px;
+    height: 158px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.1;
+  }
+
+  &--copyrights {
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+
+    p {
+      text-align: center;
+      padding: 15px;
+      margin-bottom: 0;
+      color: $copyright;
+
+      a {
+        text-decoration: none;
+        color: $copyright;
+        cursor: pointer;
+        transition: 5ms;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
